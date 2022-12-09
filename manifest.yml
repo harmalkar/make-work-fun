@@ -1,23 +1,52 @@
 modules:
+    jira:issueAction:
+        - key: devs-unleashed-forge-jira-issue-action
+          resource: gameResource
+          resolver:
+              function: resolver
+          title: Devs unleashed Jira issue action
+          viewportSize: large
+    jira:dashboardGadget:
+        - key: devs-unleashed-forge-jira-dashboard-gadget
+          thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+          resource: gameResource
+          resolver:
+              function: resolver
+          title: Devs unleashed Jira dashboard gadget
+          description: Dashboard with game
     jira:globalPage:
-        - key: forge-devs-unleashed-jira-example
-          resource: globalPage
+        - key: devs-unleashed-forge-jira-global-page
+          resource: gameResource
           resolver:
               function: resolver
-          title: forge-devs-unleashed-jira-example
+          title: Devs unleashed Jira global page
+    confluence:homepageFeed:
+        - key: devs-unleashed-forge-confluence-homepage-feed
+          resource: gameResource
+          resolver:
+              function: resolver
+          title: Devs unleashed Confluence homepage feed
+          viewportSize: large
+    macro:
+        - key: devs-unleashed-forge-confluence-macro
+          resource: gameResource
+          resolver:
+              function: resolver
+          title: Devs unleashed Confluence macro
+          viewportSize: large
     confluence:globalPage:
-        - key: forge-devs-unleashed-confluence-example
-          resource: globalPage
+        - key: devs-unleashed-forge-confluence-global-page
+          resource: gameResource
           resolver:
               function: resolver
-          title: forge-devs-unleashed-confluence-example
-          route: forge-devs-unleashed-confluence-example
+          title: Devs unleashed Confluence global page
+          route: devs-unleashed-forge-confluence-global-page
     function:
         - key: resolver
           handler: index.handler
 resources:
-    - key: globalPage
-      path: static/global-page/dist
+    - key: gameResource
+      path: static/game-resource/dist
 permissions:
     scopes:
         - read:jira-work

@@ -20,7 +20,8 @@ class DevsUnleashedStarter extends Phaser.Scene {
         await view.getContext().then((ctx) => {
             this.context = ctx;
             this.moduleType = ctx.extension.type;
-            this.product = ctx.extension.type.split(':')[0];
+            this.product =
+                ctx.extension.type === 'macro' ? 'confluence' : ctx.extension.type.split(':')[0];
             console.log('ctx', ctx);
         });
 
@@ -150,11 +151,16 @@ class DevsUnleashedStarter extends Phaser.Scene {
 const config = {
     type: Phaser.WEBGL,
     backgroundColor: '#0052CC',
-    width: 800,
-    height: 600,
     parent: 'phaser-example',
     scale: {
+        mode: Phaser.Scale.WIDTH_CONTROLS_HEIGHT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 800,
+        height: 600,
+        max: {
+            width: 800,
+            height: 600,
+        },
     },
     physics: {
         default: 'matter',
