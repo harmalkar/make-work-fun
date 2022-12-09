@@ -1,0 +1,35 @@
+{
+    "name": "devs-unleashed-global-page",
+    "version": "0.1.5",
+    "private": true,
+    "homepage": ".",
+    "dependencies": {
+        "@forge/bridge": "^2.5.0",
+        "@forge/jira-bridge": "^0.10.0",
+        "phaser": "^3.55.2"
+    },
+    "devDependencies": {
+        "parcel": "^2.8.1"
+    },
+    "scripts": {
+        "start": "PARCEL_WORKERS=0 parcel watch public/index.html --no-hmr --no-cache",
+        "build": "rm -rf dist && PARCEL_WORKERS=0 parcel build public/index.html"
+    },
+    "targets": {
+        "default": {
+            "publicUrl": "./"
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

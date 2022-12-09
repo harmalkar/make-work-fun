@@ -1,0 +1,33 @@
+modules:
+    jira:globalPage:
+        - key: forge-devs-unleashed-jira-example
+          resource: globalPage
+          resolver:
+              function: resolver
+          title: forge-devs-unleashed-jira-example
+    confluence:globalPage:
+        - key: forge-devs-unleashed-confluence-example
+          resource: globalPage
+          resolver:
+              function: resolver
+          title: forge-devs-unleashed-confluence-example
+          route: forge-devs-unleashed-confluence-example
+    function:
+        - key: resolver
+          handler: index.handler
+resources:
+    - key: globalPage
+      path: static/global-page/dist
+permissions:
+    scopes:
+        - read:jira-work
+        - read:confluence-space.summary
+    content:
+        scripts:
+            - unsafe-eval
+    external:
+        fetch:
+            client:
+                - '*.atlassian.com'
+                - '*.atlassian.net'
+                - '*.atl-paas.net'
