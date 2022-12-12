@@ -8,7 +8,7 @@
     },
     "private": true,
     "author": "Atlassian",
-    "license": "Apache-2.0",
+    "license": "SEE LICENSE IN /LICENSE",
     "homepage": "https://bitbucket.org/atlassian/devs-unleashed-forge-app-starter/src/master/README.md",
     "scripts": {
         "format": "npx prettier --write ./static ./src ./README.md",
