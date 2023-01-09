@@ -1,8 +1,6 @@
-[![Atlassian license](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
+## Make work fun
 
-## Devs unleashed - Forge app starter
-
-This is a starter app for Devs Unleased hackathon.
+Make work fun by playing an interactive game whenever you finish an issue in Jira! This app is a project submission for the Devs Unleased hackathon.
 
 This starter which contains a [PhaserJS](https://phaser.io/) sample game inside a Global Page
 module. You can access the page from the top bar menu "Apps" once it's installed, both in Jira and
@@ -85,7 +83,7 @@ forge tunnel
 -   Use the `forge install --upgrade` command when you changed permissions scope in `manifest.yml`
     to persist changes.
 
-## License
+## License for starter app
 
 Copyright (c) 2022 Atlassian and others. Apache 2.0 licensed, see [LICENSE](LICENSE) file.
 
